@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const checkParity = (a)=>{
+        if (typeof a !== 'number' || isNaN(a)) {
+            console.log('Khong phai la so');
+            return;
+        }
+         if (a % 2 === 0) {
+        console.log(`${a} la so chan`);
+    } else {
+        console.log(`${a} la so le`);
+    }
+    }
+   
+    
+
+    checkParity('abc'); 
+    checkParity(10); 
+    checkParity(7);
+</script>
+</html>
