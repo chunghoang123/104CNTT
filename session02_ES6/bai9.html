@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const getStudentSummary = (student) => {
+
+        const avg = student.list.reduce((acc, item) => acc + item.score, 0) / student.list.length;
+        let maxScore = student.list.reduce((max, item) => item.score > max ? item.score : max, student.list[0].score);
+        let minScore = student.list.reduce((min, item) => item.score < min ? item.score : min, student.list[0].score);
+        maxSuject= student.list.find(item => item.score === maxScore).subject;
+        minSuject = student.list.find(item => item.score === minScore).subject
+    ;
+        console.log
+        (`${student.name} is ${student.age} years old
+        Average score: ${avg.toFixed(2)}-> ${avg >= 8.5 ? "Học sinh giỏi" : avg >= 7 ? "Học sinh khá" : avg >= 5 ? " Học sinh trung bình" : "Học sinh yếu"}. 
+        Best suject:${maxSuject}(${maxScore}), 
+        Weakest suject :${minSuject}(${minScore})`);
+    };
+    let user = {
+
+        name : "Dev",
+        age : 20,
+        list : [
+        {subject: "Math", score: 9},
+        {subject: "English", score: 7.5},
+        {subject: "Physics", score: 6},
+        {subject: "Literature", score: 8.5}
+
+    ] 
+
+    }
+
+getStudentSummary(user);
+</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const displayUserInfo = (user) => {
+        let { name, age, location, contact,job} = user;
+        let {city,country} = location|| {};
+        let {email,phone} = contact|| {};
+        let {title,company} = job|| {};
+        console.log(`${name} is ${age} years old,lives in ${city}, ${country},word as ${title ? title : "unkown"} at ${company ? company : "unkown"}, and can be contacted via ${email ? email : "unkown"} or${phone ? phone : "unkown"} `) ;
+    };
+
+    let user = {
+        name: 'John',
+        age: 30,
+        location: {
+            city: 'New York',
+            country: 'USA'
+        },
+        contact:{
+            email: "chungss@gmail.com",
+            phone: "123-456-7890"
+        },
+        job:{
+            title: "Software Engineer",
+            company: "Tech Corp"
+        }
+    };
+    let user2 = {
+        name: 'Jane',
+        age: 25,
+        location: {
+            city: 'Los Angeles',
+            country: 'USA'
+        },
+      
+    };
+
+
+    displayUserInfo(user);
+    displayUserInfo(user2);
+  
+        
+</script>
+</html>

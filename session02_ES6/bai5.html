@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const contactList = [
+        {name : "Nguyen Van A", phone: "0123456789",email: "chungss123"},
+        {name : "Nguyen Van b", phone: "0123456798",email: "chungss123"},
+        {name : "Nguyen Van c", phone: "0123456712",email: "chungss123"},
+
+    ];
+    const addContact = (name, phone, email) => {
+        if (!name || !phone || !email) {
+            console.log("Vui lòng nhập đầy đủ thông tin.");
+            return;
+        }
+        const contact = { name, phone, email };
+        contactList.push(contact);
+        console.log("Đã thêm liên hệ:", contact);
+    };
+    const displayContacts = () => {
+        if (contactList.length === 0) {
+            console.log("Danh sách liên hệ trống.");
+            return;
+        }
+        console.log("Danh sách liên hệ:");
+        contactList.forEach((contact, index) => {
+            console.log(`${index + 1}. Tên: ${contact.name}, Số điện thoại: ${contact.phone}, Email: ${contact.email}`);
+        });
+    };
+    
+
+    addContact("Nguyen Van D", "0123456780","chungss123" );
+    displayContacts();
+
+</script>
+</html>
