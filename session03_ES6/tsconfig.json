@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",          // <== đầu ra file JS
+    "rootDir": "./src",          // <== đầu vào file TS
+    "target": "ES6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["src"],            // <== thư mục chứa file TS
+  "exclude": ["node_modules"]
+}
