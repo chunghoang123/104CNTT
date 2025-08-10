@@ -1,0 +1,15 @@
+"use strict";
+class Studentt {
+    constructor(id, age, email) {
+        this.id = id;
+        this.age = age;
+        this.email = email;
+    }
+}
+const students = [];
+students.push(new Studentt(1, 20, "chung@gmail.com"));
+students.push(new Studentt(2, 21, "tran@gmail.com"));
+students.push(new Studentt(3, 26, "tranA@gmail.com"));
+for (let i = 0; i < students.length; i++) {
+    console.log(students[i].id, students[i].age, students[i].email);
+}
